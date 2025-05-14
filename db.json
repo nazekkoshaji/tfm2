@@ -1,0 +1,349 @@
+{
+  "menuItems": [
+    {
+      "id": 1,
+      "name": {
+        "es": "Nigiri de Salmón",
+        "en": "Salmon Nigiri"
+      },
+      "description": {
+        "es": "Salmón fresco sobre arroz de sushi",
+        "en": "Fresh salmon over sushi rice"
+      },
+      "price": 10.5,
+      "image": "https://images.pexels.com/photos/271715/pexels-photo-271715.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      "allergens": [
+        "Pescado"
+      ]
+    },
+    {
+      "id": 2,
+      "name": {
+        "es": "Maki de Atún y Aguacate",
+        "en": "Tuna and Avocado Maki"
+      },
+      "description": {
+        "es": "Rollito de arroz con atún y aguacate envuelto en alga nori",
+        "en": "Rice roll with tuna and avocado wrapped in nori"
+      },
+      "price": 12,
+      "image": "https://images.pexels.com/photos/31296039/pexels-photo-31296039/free-photo-of-sushi.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      "allergens": [
+        "Pescado"
+      ]
+    },
+    {
+      "id": 3,
+      "name": {
+        "es": "Sashimi Variado",
+        "en": "Assorted Sashimi"
+      },
+      "description": {
+        "es": "Selección de sashimi de salmón, atún y pez blanco",
+        "en": "Selection of salmon, tuna and white fish sashimi"
+      },
+      "price": 14,
+      "image": "https://images.pexels.com/photos/2871756/pexels-photo-2871756.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      "allergens": [
+        "Pescado"
+      ]
+    },
+    {
+      "id": 4,
+      "name": {
+        "es": "Uramaki California",
+        "en": "California Uramaki"
+      },
+      "description": {
+        "es": "Rollo invertido con cangrejo, aguacate y pepino cubierto de sésamo",
+        "en": "Inside-out roll with crab, avocado and cucumber topped with sesame"
+      },
+      "price": 11.5,
+      "image": "https://images.pexels.com/photos/357756/pexels-photo-357756.jpeg?auto=compress&cs=tinysrgb&w=800",
+      "allergens": [
+        "Crustaceos"
+      ]
+    },
+    {
+      "id": 5,
+      "name": {
+        "es": "Gunkan de Huevas de Salmón",
+        "en": "Salmon Roe Gunkan"
+      },
+      "description": {
+        "es": "Alga nori con arroz y huevas de salmón",
+        "en": "Nori seaweed with rice and salmon roe"
+      },
+      "price": 13,
+      "image": "https://images.pexels.com/photos/24038050/pexels-photo-24038050/free-photo-of-pez-pescado-peces-pescados.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      "allergens": [
+        "Pescado"
+      ]
+    },
+    {
+      "id": 6,
+      "name": {
+        "es": "Temaki de Langostino",
+        "en": "Shrimp Temaki"
+      },
+      "description": {
+        "es": "Cono de alga nori relleno de arroz, langostino y vegetales",
+        "en": "Nori cone filled with rice, shrimp and vegetables"
+      },
+      "price": 9,
+      "image": "https://images.pexels.com/photos/28992230/pexels-photo-28992230.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      "allergens": [
+        "Crustaceos"
+      ]
+    },
+    {
+      "id": 7,
+      "name": {
+        "es": "Tartar de Atún",
+        "en": "Tuna Tartare"
+      },
+      "description": {
+        "es": "Atún rojo picado con aguacate y salsa de soja",
+        "en": "Diced red tuna with avocado and soy sauce"
+      },
+      "price": 16,
+      "image": "https://images.pexels.com/photos/24038047/pexels-photo-24038047/free-photo-of-pan-cena-comida-carne.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      "allergens": [
+        "Pescado",
+        "Soja"
+      ]
+    },
+    {
+      "id": 8,
+      "name": {
+        "es": "Nigiri de Anguila",
+        "en": "Eel Nigiri"
+      },
+      "description": {
+        "es": "Anguila glaseada sobre arroz de sushi",
+        "en": "Glazed eel over sushi rice"
+      },
+      "price": 15,
+      "image": "https://images.pexels.com/photos/31296045/pexels-photo-31296045/free-photo-of-primer-plano-de-un-rollo-de-sushi-sostenido-con-palillos.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      "allergens": [
+        "Pescado",
+        "Soja"
+      ]
+    },
+    {
+      "id": 9,
+      "name": {
+        "es": "Maki de Pepino",
+        "en": "Cucumber Maki"
+      },
+      "description": {
+        "es": "Rollito de arroz con pepino fresco envuelto en alga nori",
+        "en": "Rice roll with fresh cucumber wrapped in nori"
+      },
+      "price": 8,
+      "image": "https://images.pexels.com/photos/4725610/pexels-photo-4725610.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      "allergens": []
+    },
+    {
+      "id": 10,
+      "name": {
+        "es": "Sashimi de Pulpo",
+        "en": "Octopus Sashimi"
+      },
+      "description": {
+        "es": "Láminas finas de pulpo cocido",
+        "en": "Thin slices of cooked octopus"
+      },
+      "price": 13,
+      "image": "https://images.pexels.com/photos/8956832/pexels-photo-8956832.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      "allergens": [
+        "Moluscos"
+      ]
+    },
+    {
+      "id": 11,
+      "name": {
+        "es": "Uramaki de Salmón y Queso",
+        "en": "Salmon and Cheese Uramaki"
+      },
+      "description": {
+        "es": "Rollo invertido con salmón y queso crema",
+        "en": "Inside-out roll with salmon and cream cheese"
+      },
+      "price": 12.5,
+      "image": "https://images.pexels.com/photos/31393436/pexels-photo-31393436.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      "allergens": [
+        "Pescado",
+        "Lacteos"
+      ]
+    },
+    {
+      "id": 12,
+      "name": {
+        "es": "Gunkan de Erizo de Mar",
+        "en": "Sea Urchin Gunkan"
+      },
+      "description": {
+        "es": "Alga nori con arroz y erizo de mar",
+        "en": "Nori seaweed with rice and sea urchin"
+      },
+      "price": 18,
+      "image": "https://images.pexels.com/photos/6541663/pexels-photo-6541663.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      "allergens": [
+        "Moluscos"
+      ]
+    },
+    {
+      "id": 13,
+      "name": {
+        "es": "Temaki Vegetariano",
+        "en": "Vegetarian Temaki"
+      },
+      "description": {
+        "es": "Cono de alga nori relleno de arroz y vegetales",
+        "en": "Nori cone filled with rice and vegetables"
+      },
+      "price": 9.5,
+      "image": "https://images.pexels.com/photos/29934980/pexels-photo-29934980/free-photo-of-apetitoso-sushi-enrollado-a-mano-con-palillos.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      "allergens": []
+    },
+    {
+      "id": 14,
+      "name": {
+        "es": "Tartar de Salmón",
+        "en": "Salmon Tartare"
+      },
+      "description": {
+        "es": "Salmón picado con cebollino y salsa de soja",
+        "en": "Chopped salmon with scallion and soy sauce"
+      },
+      "price": 15,
+      "image": "https://images.pexels.com/photos/30987133/pexels-photo-30987133/free-photo-of-tartar-de-salmon-gourmet-con-aguacate-y-huevas.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      "allergens": [
+        "Pescado",
+        "Soja"
+      ]
+    },
+    {
+      "id": 15,
+      "name": {
+        "es": "Nigiri de Camarón",
+        "en": "Shrimp Nigiri"
+      },
+      "description": {
+        "es": "Camarón cocido sobre arroz de sushi",
+        "en": "Cooked shrimp over sushi rice"
+      },
+      "price": 11,
+      "image": "https://images.pexels.com/photos/31296041/pexels-photo-31296041/free-photo-of-destino-japon.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      "allergens": [
+        "Crustaceos"
+      ]
+    },
+    {
+      "id": 16,
+      "name": {
+        "es": "Maki de Mango y Pepino",
+        "en": "Mango and Cucumber Maki"
+      },
+      "description": {
+        "es": "Rollito de arroz con mango y pepino envuelto en alga nori",
+        "en": "Rice roll with mango and cucumber wrapped in nori"
+      },
+      "price": 8.5,
+      "image": "https://images.pexels.com/photos/10692489/pexels-photo-10692489.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      "allergens": []
+    },
+    {
+      "id": 17,
+      "name": {
+        "es": "Sashimi de Atún",
+        "en": "Tuna Sashimi"
+      },
+      "description": {
+        "es": "Láminas finas de atún rojo",
+        "en": "Thin slices of red tuna"
+      },
+      "price": 14.5,
+      "image": "https://images.pexels.com/photos/4071397/pexels-photo-4071397.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      "allergens": [
+        "Pescado"
+      ]
+    },
+    {
+      "id": 18,
+      "name": {
+        "es": "Uramaki de Tempura de Camarón",
+        "en": "Tempura Shrimp Uramaki"
+      },
+      "description": {
+        "es": "Rollo invertido con camarón tempurizado y aguacate",
+        "en": "Inside-out roll with tempura shrimp and avocado"
+      },
+      "price": 13,
+      "image": "https://images.pexels.com/photos/19356320/pexels-photo-19356320/free-photo-of-plato-rollos-peces-pescados.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      "allergens": [
+        "Crustaceos",
+        "Gluten"
+      ]
+    },
+    {
+      "id": 19,
+      "name": {
+        "es": "Gunkan de Cangrejo",
+        "en": "Crab Gunkan"
+      },
+      "description": {
+        "es": "Alga nori con arroz y carne de cangrejo",
+        "en": "Nori seaweed with rice and crab meat"
+      },
+      "price": 12,
+      "image": "https://images.pexels.com/photos/31145232/pexels-photo-31145232.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      "allergens": [
+        "Crustaceos"
+      ]
+    },
+    {
+      "id": 20,
+      "name": {
+        "es": "Temaki de Atún Picante",
+        "en": "Spicy Tuna Temaki"
+      },
+      "description": {
+        "es": "Cono de alga nori relleno de arroz y atún picante",
+        "en": "Nori cone filled with rice and spicy tuna"
+      },
+      "price": 10,
+      "image": "https://images.pexels.com/photos/3296394/pexels-photo-3296394.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      "allergens": [
+        "Pescado"
+      ]
+    },
+    {
+      "id": 21,
+      "name": {
+        "es": "Tartar de Pulpo",
+        "en": "Octopus Tartare"
+      },
+      "description": {
+        "es": "Pulpo picado con cebollino y salsa cítrica",
+        "en": "Chopped octopus with scallion and citrus sauce"
+      },
+      "price": 16,
+      "image": "https://images.pexels.com/photos/18229216/pexels-photo-18229216/free-photo-of-plato-azucar-tuercas-frutos-secos.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      "allergens": [
+        "Moluscos"
+      ]
+    }
+  ],
+  "reservations": [
+    {
+      "id": "6b74",
+      "name": "nazek",
+      "phone": "54323433333",
+      "date": "2025-05-01",
+      "time": "17:44",
+      "people": 15
+    }
+  ]
+}

@@ -1,0 +1,91 @@
+.header-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
+}
+
+.header-transparent {
+    background-color: transparent;
+    color: white;
+    padding: 1rem 0;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+}
+
+.header-colored {
+    background-color: black;
+    color: white;
+    padding: 1rem 0;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+}
+
+.nav-list {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    list-style: none;
+    margin-top: 1rem;
+}
+
+.nav-list li a {
+    position: relative;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+    z-index: 1;
+}
+
+.nav-list li a::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 120px;
+    height: 120px;
+    background: radial-gradient(circle, rgba(255, 0, 0, 0.4) 0%, rgba(255, 0, 0, 0) 70%);
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: -1;
+}
+
+.nav-list li a:hover::before {
+    opacity: 1;
+}
+
+.lang-button {
+    background-color: transparent;
+    border: 2px solid #f4f4f4;
+    color: #f4f4f4;
+    padding: 0.4rem 0.8rem;
+    font-size: 0.95rem;
+    border-radius: 9999px; /* estilo pill */
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    z-index: 1000;
+}
+
+.lang-button:hover {
+    background-color: #f4f4f4;
+    color: #0d0d0d;
+    transform: scale(1.05);
+}
+
+.lang-button:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.4);
+}

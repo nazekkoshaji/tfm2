@@ -1,0 +1,40 @@
+/* MARQUEE flotante arriba sin afectar layout */
+.marquee {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100vw;
+    overflow: hidden;
+    z-index: 3;
+    background: rgba(0, 0, 0, 0.6);
+    border-top: 1px solid #e91e63;
+    border-bottom: 1px solid #e91e63;
+}
+
+
+/* Contenedor del texto en movimiento */
+.marquee-track {
+    display: flex;
+    width: max-content;
+    animation: scroll 20s linear infinite;
+}
+
+/* Texto duplicado para loop sin salto */
+.marquee-text {
+    color: darkred;
+    font-size: 4rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    white-space: nowrap;
+    padding: 0.5rem 1rem;
+}
+
+/* Animación horizontal */
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
