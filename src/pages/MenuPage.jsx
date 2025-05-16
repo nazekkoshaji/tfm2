@@ -1,10 +1,20 @@
-import Menu from '../components/Menu';
+import { Link } from 'react-router-dom';
+import { useLanguage } from '../context/LanguageContext';
+import { translations } from '../context/translations';
+import './MenuPage.css'; // crea este archivo si aún no existe
 
 export default function MenuPage() {
+    const { language } = useLanguage();
+    const t = translations[language];
+
     return (
-        <>
-            <h2>Menú</h2>
-            <Menu />
-        </>
+        <div className="menu-page">
+            <h2>{t.menu}</h2>
+            <div className="menu-buttons">
+                <Link to="/menu/platos" className="menu-button">Platos</Link>
+                <Link to="/menu/bebidas" className="menu-button">Bebidas</Link>
+                <Link to="/menu/postres" className="menu-button">Postres</Link>
+            </div>
+        </div>
     );
 }

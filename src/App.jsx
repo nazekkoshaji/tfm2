@@ -1,6 +1,8 @@
+
 import { Routes, Route, useLocation } from 'react-router-dom';
 import Home from './pages/Home';
 import MenuPage from './pages/MenuPage';
+import Menu from './components/Menu';  // Asegúrate de tener este componente
 import About from './pages/About';
 import ReservationPage from './pages/ReservationPage';
 import Header from './components/Header';
@@ -12,9 +14,7 @@ function App() {
     const location = useLocation();
     const isHome = location.pathname === "/";
 
-
     return (
-
         <div className={`app ${isHome ? 'home-background' : ''}`}>
             <Header />
 
@@ -26,18 +26,17 @@ function App() {
             )}
 
             <main className={isHome ? "main-home" : "main-default"}>
-
                 <Routes>
                     <Route path="/" element={<Home />} />
                     <Route path="/menu" element={<MenuPage />} />
+                    <Route path="/menu/:categoria" element={<Menu />} />
                     <Route path="/reservas" element={<ReservationPage />} />
                     <Route path="/sobre" element={<About />} />
                 </Routes>
             </main>
+
             <Footer />
-
         </div>
-
     );
 }
 

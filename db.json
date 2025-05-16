@@ -14,7 +14,8 @@
       "image": "https://images.pexels.com/photos/271715/pexels-photo-271715.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
       "allergens": [
         "Pescado"
-      ]
+      ],
+      "tipo": "plato"
     },
     {
       "id": 2,
@@ -30,7 +31,8 @@
       "image": "https://images.pexels.com/photos/31296039/pexels-photo-31296039/free-photo-of-sushi.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
       "allergens": [
         "Pescado"
-      ]
+      ],
+      "tipo": "plato"
     },
     {
       "id": 3,
@@ -46,7 +48,8 @@
       "image": "https://images.pexels.com/photos/2871756/pexels-photo-2871756.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
       "allergens": [
         "Pescado"
-      ]
+      ],
+      "tipo": "plato"
     },
     {
       "id": 4,
@@ -62,7 +65,8 @@
       "image": "https://images.pexels.com/photos/357756/pexels-photo-357756.jpeg?auto=compress&cs=tinysrgb&w=800",
       "allergens": [
         "Crustaceos"
-      ]
+      ],
+      "tipo": "plato"
     },
     {
       "id": 5,
@@ -78,7 +82,8 @@
       "image": "https://images.pexels.com/photos/24038050/pexels-photo-24038050/free-photo-of-pez-pescado-peces-pescados.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
       "allergens": [
         "Pescado"
-      ]
+      ],
+      "tipo": "plato"
     },
     {
       "id": 6,
@@ -94,7 +99,8 @@
       "image": "https://images.pexels.com/photos/28992230/pexels-photo-28992230.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
       "allergens": [
         "Crustaceos"
-      ]
+      ],
+      "tipo": "plato"
     },
     {
       "id": 7,
@@ -111,7 +117,8 @@
       "allergens": [
         "Pescado",
         "Soja"
-      ]
+      ],
+      "tipo": "plato"
     },
     {
       "id": 8,
@@ -128,7 +135,8 @@
       "allergens": [
         "Pescado",
         "Soja"
-      ]
+      ],
+      "tipo": "plato"
     },
     {
       "id": 9,
@@ -142,7 +150,8 @@
       },
       "price": 8,
       "image": "https://images.pexels.com/photos/4725610/pexels-photo-4725610.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-      "allergens": []
+      "allergens": [],
+      "tipo": "plato"
     },
     {
       "id": 10,
@@ -158,7 +167,8 @@
       "image": "https://images.pexels.com/photos/8956832/pexels-photo-8956832.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
       "allergens": [
         "Moluscos"
-      ]
+      ],
+      "tipo": "plato"
     },
     {
       "id": 11,
@@ -175,7 +185,8 @@
       "allergens": [
         "Pescado",
         "Lacteos"
-      ]
+      ],
+      "tipo": "plato"
     },
     {
       "id": 12,
@@ -191,7 +202,8 @@
       "image": "https://images.pexels.com/photos/6541663/pexels-photo-6541663.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
       "allergens": [
         "Moluscos"
-      ]
+      ],
+      "tipo": "plato"
     },
     {
       "id": 13,
@@ -205,7 +217,8 @@
       },
       "price": 9.5,
       "image": "https://images.pexels.com/photos/29934980/pexels-photo-29934980/free-photo-of-apetitoso-sushi-enrollado-a-mano-con-palillos.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-      "allergens": []
+      "allergens": [],
+      "tipo": "plato"
     },
     {
       "id": 14,
@@ -222,7 +235,8 @@
       "allergens": [
         "Pescado",
         "Soja"
-      ]
+      ],
+      "tipo": "plato"
     },
     {
       "id": 15,
@@ -238,7 +252,8 @@
       "image": "https://images.pexels.com/photos/31296041/pexels-photo-31296041/free-photo-of-destino-japon.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
       "allergens": [
         "Crustaceos"
-      ]
+      ],
+      "tipo": "plato"
     },
     {
       "id": 16,
@@ -252,7 +267,8 @@
       },
       "price": 8.5,
       "image": "https://images.pexels.com/photos/10692489/pexels-photo-10692489.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-      "allergens": []
+      "allergens": [],
+      "tipo": "plato"
     },
     {
       "id": 17,
@@ -268,7 +284,8 @@
       "image": "https://images.pexels.com/photos/4071397/pexels-photo-4071397.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
       "allergens": [
         "Pescado"
-      ]
+      ],
+      "tipo": "plato"
     },
     {
       "id": 18,
@@ -285,7 +302,8 @@
       "allergens": [
         "Crustaceos",
         "Gluten"
-      ]
+      ],
+      "tipo": "plato"
     },
     {
       "id": 19,
@@ -301,7 +319,8 @@
       "image": "https://images.pexels.com/photos/31145232/pexels-photo-31145232.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
       "allergens": [
         "Crustaceos"
-      ]
+      ],
+      "tipo": "plato"
     },
     {
       "id": 20,
@@ -317,7 +336,8 @@
       "image": "https://images.pexels.com/photos/3296394/pexels-photo-3296394.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
       "allergens": [
         "Pescado"
-      ]
+      ],
+      "tipo": "plato"
     },
     {
       "id": 21,
@@ -333,6 +353,71 @@
       "image": "https://images.pexels.com/photos/18229216/pexels-photo-18229216/free-photo-of-plato-azucar-tuercas-frutos-secos.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
       "allergens": [
         "Moluscos"
+      ],
+      "tipo": "plato"
+    },
+    {
+      "id": 101,
+      "tipo": "bebida",
+      "name": {
+        "es": "Té Verde Japonés",
+        "en": "Japanese Green Tea"
+      },
+      "description": {
+        "es": "Té verde tradicional caliente",
+        "en": "Traditional hot green tea"
+      },
+      "price": 3.0,
+      "image": "https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg",
+      "allergens": []
+    },
+    {
+      "id": 102,
+      "tipo": "bebida",
+      "name": {
+        "es": "Ramune",
+        "en": "Ramune"
+      },
+      "description": {
+        "es": "Refresco japonés con bola de vidrio",
+        "en": "Japanese soda with marble stopper"
+      },
+      "price": 4.0,
+      "image": "https://images.pexels.com/photos/15729049/pexels-photo-15729049.jpeg",
+      "allergens": []
+    },
+    {
+      "id": 201,
+      "tipo": "postre",
+      "name": {
+        "es": "Mochi de Té Verde",
+        "en": "Green Tea Mochi"
+      },
+      "description": {
+        "es": "Dulce japonés relleno de helado de té verde",
+        "en": "Japanese dessert with green tea ice cream"
+      },
+      "price": 5.0,
+      "image": "https://images.pexels.com/photos/11320460/pexels-photo-11320460.jpeg",
+      "allergens": [
+        "Lácteos"
+      ]
+    },
+    {
+      "id": 202,
+      "tipo": "postre",
+      "name": {
+        "es": "Dorayaki",
+        "en": "Dorayaki"
+      },
+      "description": {
+        "es": "Pastel japonés relleno de anko (pasta de judía roja)",
+        "en": "Japanese pancake with red bean paste"
+      },
+      "price": 4.5,
+      "image": "https://images.pexels.com/photos/5863621/pexels-photo-5863621.jpeg",
+      "allergens": [
+        "Gluten"
       ]
     }
   ],

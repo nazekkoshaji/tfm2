@@ -1,17 +1,30 @@
 import { useEffect, useState } from 'react';
+import { useParams } from 'react-router-dom';
 import { getMenuItems } from '../services/api';
 import { useLanguage } from '../context/LanguageContext';
 import './Menu.css';
 
 export default function Menu() {
     const [items, setItems] = useState([]);
+    const { categoria } = useParams();
+
     const [selectedAllergens, setSelectedAllergens] = useState([]);
     const [isModalOpen, setIsModalOpen] = useState(false);
     const { language } = useLanguage();
 
+
     useEffect(() => {
-        getMenuItems().then(setItems);
-    }, []);
+        getMenuItems().then(data => {
+            const filtered = data.filter(item => {
+                if (categoria === "platos") return item.tipo === "plato";
+                if (categoria === "bebidas") return item.tipo === "bebida";
+                if (categoria === "postres") return item.tipo === "postre";
+                return false;
+            });
+            setItems(filtered);
+        });
+    }, [categoria]);
+
 
     const normalizeAllergen = (name) =>
         name.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();

@@ -169,3 +169,59 @@ html, body {
         padding: 1.5rem;
     }
 }
+/* Estilo dropdown limpio y elegante */
+.dropdown {
+    position: relative;
+}
+
+.dropdown > a,
+.dropdown > span {
+    padding: 0.5rem 1rem;
+    font-weight: 500;
+    text-decoration: none;
+    color: #222;
+    transition: color 0.2s ease;
+}
+
+.dropdown > a:hover,
+.dropdown > span:hover {
+    color: #b80000; /* Rojo japonés sutil */
+}
+
+/* Submenú */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #ffffff;
+    border: 1px solid #e5e5e5;
+    border-radius: 6px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
+    min-width: 160px;
+    padding: 0.25rem 0;
+    z-index: 10;
+}
+
+.dropdown-content li {
+    list-style: none;
+}
+
+.dropdown-content li a {
+    display: block;
+    padding: 0.5rem 1rem;
+    font-size: 14px;
+    color: #333;
+    text-decoration: none;
+    transition: background-color 0.2s ease;
+}
+
+.dropdown-content li a:hover {
+    background-color: #f5f5f5;
+    color: #b80000;
+}
+
+/* Mostrar al hacer hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}

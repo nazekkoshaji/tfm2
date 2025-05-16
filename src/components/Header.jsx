@@ -23,7 +23,14 @@ function Header() {
                 <nav>
                     <ul className="nav-list">
                         <li><Link to="/">{t.home}</Link></li>
-                        <li><Link to="/menu">{t.menu}</Link></li>
+                        <li className="dropdown">
+                            <Link to="/menu">{t.menu}</Link>
+                            <ul className="dropdown-content">
+                                <li><Link to="/menu/platos">{t.platos}</Link></li>
+                                <li><Link to="/menu/bebidas">{t.bebidas}</Link></li>
+                                <li><Link to="/menu/postres">{t.postres}</Link></li>
+                            </ul>
+                        </li>
                         <li><Link to="/reservas">{t.reservas}</Link></li>
                         <li><Link to="/sobre">{t.sobreNosotros}</Link></li>
                     </ul>

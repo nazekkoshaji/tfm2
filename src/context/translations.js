@@ -10,6 +10,9 @@ export const translations = {
         direccion: "Calle Ficticia 123, Madrid, España",
         telefono: "Teléfono: +34 600 123 456",
         horario: "Horario: Lun-Dom 13:00 – 23:00",
+        platos:"Platos",
+        bebidas:"Bebidas",
+        postres:"Postres",
         about: {
             tabs: {
                 chef: 'Nuestro chef',
@@ -46,6 +49,9 @@ export const translations = {
         direccion: "123 Fictional Street, Madrid, Spain",
         telefono: "Phone Number: +34 600 123 456",
         horario: "Hours: Mon-Sun 1:00 PM – 11:00 PM",
+        platos: "Dishes",
+        bebidas: "Drinks",
+        postres: "Desserts",
         about: {
             tabs: {
                 chef: 'Our Chef',
