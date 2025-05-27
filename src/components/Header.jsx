@@ -16,7 +16,7 @@ function Header() {
                 <button onClick={toggleLanguage} className="lang-button">
                     {language === 'es' ? 'EN' : 'ES'}
                 </button>
-                <h1>SUSHI WAHEED</h1>
+                <h1>SUSHI BAR</h1>
 
 
                 {/* Navegación con traducción */}
