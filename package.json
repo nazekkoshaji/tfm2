@@ -8,9 +8,10 @@
     "build": "vite build",
     "lint": "eslint tfm2",
     "preview": "vite preview",
-    "server": "json-server --watch db.json --port 4000"
+    "server": "json-server --watch public/db.json --port 4000"
   },
   "dependencies": {
+    "express": "^5.1.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-router-dom": "^7.5.3",

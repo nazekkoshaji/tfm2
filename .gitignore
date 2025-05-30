@@ -23,3 +23,4 @@ dist-ssr
 *.sln
 *.sw?
 public/fondo.mp4
+.vercel
