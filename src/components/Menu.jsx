@@ -58,10 +58,9 @@ export default function Menu() {
     return (
         <div className="menu-container">
 
-            {/* Icono para abrir el modal */}
             <div className="filter-bar">
                 <img
-                    src="/public/filtrar.png"
+                    src="/filtrar.png"
                     alt="Filtrar"
                     className="filter-icon"
                     onClick={() => setIsModalOpen(true)}
