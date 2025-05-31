@@ -10,9 +10,9 @@ export const translations = {
         direccion: "Calle Ficticia 123, Madrid, España",
         telefono: "Teléfono: +34 600 123 456",
         horario: "Horario: Lun-Dom 13:00 – 23:00",
-        platos:"Platos",
-        bebidas:"Bebidas",
-        postres:"Postres",
+        platos: "Platos",
+        bebidas: "Bebidas",
+        postres: "Postres",
         about: {
             tabs: {
                 chef: 'Nuestro chef',
@@ -36,6 +36,26 @@ export const translations = {
                     image: 'https://images.pexels.com/photos/5777056/pexels-photo-5777056.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'
                 }
             }
+        },
+        delivery: {
+            title: "¡Pide con tu app favorita!",
+            description: "Puedes pedir tus platos favoritos a través de nuestras apps asociadas.",
+            uber: "Pedir con Uber Eats",
+            glovo: "Pedir con Glovo",
+            justEat: "Pedir con Just Eat"
+        },
+        reservation: {
+            title: "Reserva tu mesa",
+            name: "Nombre:",
+            email: "Correo electrónico:",
+            phone: "Teléfono:",
+            date: "Fecha:",
+            time: "Hora:",
+            selectTime: "Seleccione la hora",
+            people: "Nº de personas:",
+            button: "Reservar",
+            success: "¡Reserva realizada con éxito 🎉!",
+            error: "Error al realizar la reserva"
         }
     },
     en: {
@@ -75,6 +95,26 @@ export const translations = {
                     image: 'https://images.pexels.com/photos/5777056/pexels-photo-5777056.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'
                 }
             }
+        },
+        delivery: {
+            title: "Order with your favorite app!",
+            description: "You can order your favorite dishes through our delivery partners.",
+            uber: "Order with Uber Eats",
+            glovo: "Order with Glovo",
+            justEat: "Order with Just Eat"
+        },
+        reservation: {
+            title: "Book your table",
+            name: "Name:",
+            email: "Email:",
+            phone: "Phone:",
+            date: "Date:",
+            time: "Time:",
+            selectTime: "Select a time",
+            people: "No. of people:",
+            button: "Book",
+            success: "Reservation successfully made 🎉!",
+            error: "Error making the reservation"
         }
     }
 };

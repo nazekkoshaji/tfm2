@@ -1,25 +1,66 @@
-.menu-page {
-    text-align: center;
-    padding: 2rem;
+/* Estilo base del contenedor de la página */
+
+/* Usar fuentes Spectral y Karla */
+body, html {
+    font-family: var(--font-principal);
+}
+h1, h2, h3, h4, h5, h6, button, input, textarea, select {
+    font-family: var(--font-secundaria);
 }
 
+/* Usar fuentes Spectral y Karla */
+body, html {
+    font-family: var(--font-principal);
+}
+h1, h2, h3, h4, h5, h6, button, input, textarea, select {
+    font-family: var(--font-secundaria);
+    color:white;
+
+}
+.menu-page{
+    padding: 6rem 2rem;
+    max-width: 100vw;
+    margin: 0 auto;
+    font-family: 'Helvetica Neue', sans-serif;
+    color: var(--color-negro);
+    background-color: black;
+}
+
+/* Botones tipo etiquetas modernas */
 .menu-buttons {
     display: flex;
-    justify-content: center;
     gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
     margin-top: 2rem;
 }
 
 .menu-button {
-    padding: 0.75rem 1.5rem;
-    background-color: #f7f7f7;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+    background: transparent;
+    border: 2px solid #A60303;
+    padding: 0.8rem 1.6rem;
+    border-radius: 999px;
+    font-size: 1.1rem;
+    font-weight: 500;
     text-decoration: none;
-    color: inherit;
-    transition: background-color 0.3s ease;
+    color: #EF491F;
+    transition: background-color 0.3s, color 0.3s;
+    cursor: pointer;
 }
 
 .menu-button:hover {
-    background-color: #e0e0e0;
+    background-color: #EF491F;
+    color: var(--color-negro);
+    text-decoration: none;
+}
+
+.menu-button.active {
+    background-color: #EF491F;
+    color: var(--color-negro);
+    text-decoration: none;
+}
+
+button:focus, a:focus, input:focus, textarea:focus, select:focus {
+    outline: 2px dashed #A60303;
+    outline-offset: 2px;
 }

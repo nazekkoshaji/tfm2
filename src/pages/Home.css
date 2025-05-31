@@ -1,3 +1,19 @@
+
+/* Usar fuentes Spectral y Karla */
+body, html {
+  font-family: var(--font-principal);
+}
+h1, h2, h3, h4, h5, h6, button, input, textarea, select {
+  font-family: var(--font-secundaria);
+}
+
+/* Usar fuentes Spectral y Karla */
+body, html {
+  font-family: var(--font-principal);
+}
+h1, h2, h3, h4, h5, h6, button, input, textarea, select {
+  font-family: var(--font-secundaria);
+}
 /* MARQUEE flotante arriba sin afectar layout */
 .marquee {
     position: absolute;
@@ -7,8 +23,8 @@
     overflow: hidden;
     z-index: 3;
     background: rgba(0, 0, 0, 0.6);
-    border-top: 1px solid #e91e63;
-    border-bottom: 1px solid #e91e63;
+    border-top: 1px solid #A60303;
+    border-bottom: 1px solid #A60303;
 }
 
 
@@ -21,7 +37,7 @@
 
 /* Texto duplicado para loop sin salto */
 .marquee-text {
-    color: darkred;
+    color: #A60303;
     font-size: 4rem;
     font-weight: bold;
     text-transform: uppercase;
@@ -37,4 +53,14 @@
     100% {
         transform: translateX(-50%);
     }
+}
+
+button:focus, a:focus, input:focus, textarea:focus, select:focus {
+  outline: 2px dashed var(--color-acento);
+  outline-offset: 2px;
+}
+
+button:focus, a:focus, input:focus, textarea:focus, select:focus {
+  outline: 2px dashed var(--color-acento);
+  outline-offset: 2px;
 }

@@ -1,0 +1,87 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Spectral:wght@400;700&family=Karla:wght@400;700&display=swap');
+
+:root {
+  --color-principal: #A60303;
+  --color-secundario: #400202;
+  --color-acento: #EF491F;
+  --color-suave: #0A2602;
+  --color-negro: #000000;
+
+  --font-principal: 'Spectral', serif;
+  --font-secundaria: 'Karla', sans-serif;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-principal);
+  background-color: var(--color-suave);
+  color: #ffffff;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-secundaria);
+}
+
+a {
+  color: var(--color-acento);
+  text-decoration: none;
+}
+
+a:hover,
+a:focus {
+  text-decoration: underline;
+  outline: 2px dashed var(--color-acento);
+  outline-offset: 2px;
+}
+
+button, input[type="submit"] {
+  background-color: var(--color-principal);
+  color: #ffffff;
+  border: none;
+  padding: 0.5em 1em;
+  cursor: pointer;
+  font-family: var(--font-secundaria);
+}
+
+button:focus,
+input[type="submit"]:focus {
+  outline: 2px dashed var(--color-acento);
+  outline-offset: 2px;
+}
+
+input, textarea, select {
+  font-family: var(--font-secundaria);
+  color: var(--color-negro);
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  outline: 2px dashed var(--color-acento);
+  outline-offset: 2px;
+}
+
+nav, main, footer {
+
+  color: #ffffff;
+}
+
+.text-dark {
+  color: var(--color-negro);
+}
+
+.bg-acento {
+  background-color: var(--color-acento);
+  color: #ffffff;
+}
+
+.bg-principal {
+  background-color: var(--color-principal);
+}
+
+.bg-suave {
+  background-color: var(--color-suave);
+}

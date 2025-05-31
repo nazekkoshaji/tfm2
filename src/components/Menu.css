@@ -1,3 +1,19 @@
+
+/* Usar fuentes Spectral y Karla */
+body, html {
+  font-family: var(--font-principal);
+}
+h1, h2, h3, h4, h5, h6, button, input, textarea, select {
+  font-family: var(--font-secundaria);
+}
+
+/* Usar fuentes Spectral y Karla */
+body, html {
+  font-family: var(--font-principal);
+}
+h1, h2, h3, h4, h5, h6, button, input, textarea, select {
+  font-family: var(--font-secundaria);
+}
 /* Evita que el body y html desborden el viewport */
 html, body {
     margin: 0;
@@ -194,13 +210,14 @@ html, body {
     position: absolute;
     top: 100%;
     left: 0;
-    background-color: #ffffff;
+    background-color: var(--color-negro);
     border: 1px solid #e5e5e5;
     border-radius: 6px;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
     min-width: 160px;
     padding: 0.25rem 0;
     z-index: 10;
+
 }
 
 .dropdown-content li {
@@ -217,11 +234,23 @@ html, body {
 }
 
 .dropdown-content li a:hover {
-    background-color: #f5f5f5;
-    color: #b80000;
+    background-color: #EF491F ;
+    color: var(--color-negro);
+    border-color: #A60303;
+    border: 2px solid;
 }
 
 /* Mostrar al hacer hover */
 .dropdown:hover .dropdown-content {
     display: block;
+}
+
+button:focus, a:focus, input:focus, textarea:focus, select:focus {
+  outline: 2px dashed var(--color-acento);
+  outline-offset: 2px;
+}
+
+button:focus, a:focus, input:focus, textarea:focus, select:focus {
+  outline: 2px dashed var(--color-acento);
+  outline-offset: 2px;
 }

@@ -9,6 +9,7 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 
 import './App.css';
+import DeliveryPage from "./pages/DeliveryPage.jsx";
 
 function App() {
     const location = useLocation();
@@ -32,6 +33,8 @@ function App() {
                     <Route path="/menu/:categoria" element={<Menu />} />
                     <Route path="/reservas" element={<ReservationPage />} />
                     <Route path="/sobre" element={<About />} />
+                    <Route path="/delivery" element={<DeliveryPage />} />
+
                 </Routes>
             </main>
 

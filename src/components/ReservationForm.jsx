@@ -1,30 +1,36 @@
 import { useState, useEffect } from 'react';
+import { useLanguage } from '../context/LanguageContext';
+import { translations } from '../context/translations';
+import './ReservationForm.css';
 
 export default function ReservationForm() {
+    const { language } = useLanguage();
+    const t = translations[language].reservation;
+
     const [formData, setFormData] = useState({
         name: '',
+        email: '',
         phone: '',
         date: '',
         time: '',
-        people: 1
+        people: 1,
     });
-
     const [reservations, setReservations] = useState([]);
     const [error, setError] = useState('');
     const [success, setSuccess] = useState('');
 
-    // Cargar reservas existentes
     useEffect(() => {
         fetch('http://localhost:4000/reservations')
-            .then(res => res.json())
-            .then(data => setReservations(data));
+            .then((res) => res.json())
+            .then((data) => setReservations(data))
+            .catch((err) => console.error('Error fetching reservations:', err));
     }, []);
 
     const handleChange = (e) => {
         const { name, value } = e.target;
-        setFormData(prev => ({
+        setFormData((prev) => ({
             ...prev,
-            [name]: name === 'people' ? parseInt(value) : value
+            [name]: name === 'people' ? parseInt(value) : value,
         }));
     };
 
@@ -33,68 +39,130 @@ export default function ReservationForm() {
         setError('');
         setSuccess('');
 
-        const totalPeople = reservations.reduce((sum, r) => sum + r.people, 0);
-        const newTotal = totalPeople + formData.people;
-
-        if (newTotal > 15) {
-            setError('¡No se puede exceder el aforo de 15 personas!');
-            return;
-        }
-
-        const response = await fetch('http://localhost:4000/reservations', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify(formData)
-        });
-
-        if (response.ok) {
-            setSuccess('Reserva realizada con éxito 🎉');
-            setFormData({
-                name: '',
-                phone: '',
-                date: '',
-                time: '',
-                people: 1
+        try {
+            const response = await fetch('http://localhost:4000/reservations', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(formData),
             });
 
-            const updated = await fetch('http://localhost:4000/reservations').then(res => res.json());
-            setReservations(updated);
-        } else {
-            setError('Error al realizar la reserva');
+            if (response.ok) {
+                setSuccess(t.success);
+                setFormData({
+                    name: '',
+                    email: '',
+                    phone: '',
+                    date: '',
+                    time: '',
+                    people: 1,
+                });
+                const updated = await fetch('http://localhost:4000/reservations').then((res) => res.json());
+                setReservations(updated);
+            } else {
+                setError(t.error);
+            }
+        } catch (error) {
+            console.error('Error al enviar la reserva:', error);
+            setError(t.error);
         }
     };
 
+    const timeOptions = [];
+    for (let hour = 20; hour <= 23; hour++) {
+        const formatted = hour.toString().padStart(2, '0') + ':00';
+        timeOptions.push(formatted);
+    }
+    timeOptions.push('00:00');
+
     return (
-        <form onSubmit={handleSubmit} className="reservation-form">
-            <label>
-                Nombre:
-                <input type="text" name="name" value={formData.name} onChange={handleChange} required />
-            </label>
+        <div className="reservation-page">
+            <div className="reservation-content">
+                <form onSubmit={handleSubmit} className="reservation-form">
+                    <h2>{t.title}</h2>
 
-            <label>
-                Teléfono:
-                <input type="tel" name="phone" value={formData.phone} onChange={handleChange} required />
-            </label>
+                    <label htmlFor="name">{t.name}</label>
+                    <input
+                        type="text"
+                        id="name"
+                        name="name"
+                        value={formData.name}
+                        onChange={handleChange}
+                        placeholder={t.name}
+                        required
+                    />
 
-            <label>
-                Fecha:
-                <input type="date" name="date" value={formData.date} onChange={handleChange} required />
-            </label>
+                    <label htmlFor="email">{t.email}</label>
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        value={formData.email}
+                        onChange={handleChange}
+                        placeholder={t.email}
+                        required
+                    />
 
-            <label>
-                Hora:
-                <input type="time" name="time" value={formData.time} onChange={handleChange} required />
-            </label>
+                    <label htmlFor="phone">{t.phone}</label>
+                    <input
+                        type="tel"
+                        id="phone"
+                        name="phone"
+                        value={formData.phone}
+                        onChange={handleChange}
+                        placeholder={t.phone}
+                        required
+                    />
 
-            <label>
-                Nº de personas:
-                <input type="number" name="people" min="1" max="15" value={formData.people} onChange={handleChange} required />
-            </label>
+                    <div className="form-row">
+                        <div className="form-group">
+                            <label htmlFor="date">{t.date}</label>
+                            <input
+                                type="date"
+                                id="date"
+                                name="date"
+                                value={formData.date}
+                                onChange={handleChange}
+                                required
+                            />
+                        </div>
 
-            <button type="submit">Reservar</button>
+                        <div className="form-group">
+                            <label htmlFor="time">{t.time}</label>
+                            <select
+                                id="time"
+                                name="time"
+                                value={formData.time}
+                                onChange={handleChange}
+                                required
+                            >
+                                <option value="">{t.selectTime}</option>
+                                {timeOptions.map((hour) => (
+                                    <option key={hour} value={hour}>{hour}</option>
+                                ))}
+                            </select>
+                        </div>
 
-            {error && <p style={{ color: 'red' }}>{error}</p>}
-            {success && <p style={{ color: 'green' }}>{success}</p>}
-        </form>
+                        <div className="form-group">
+                            <label htmlFor="people">{t.people}</label>
+                            <input
+                                type="number"
+                                id="people"
+                                name="people"
+                                min="1"
+                                max="15"
+                                value={formData.people}
+                                onChange={handleChange}
+                                required
+                            />
+                        </div>
+                    </div>
+
+                    <button type="submit">{t.button}</button>
+
+                    {error && <p className="error">{error}</p>}
+                    {success && <p className="success">{success}</p>}
+                </form>
+            </div>
+        </div>
     );
 }
