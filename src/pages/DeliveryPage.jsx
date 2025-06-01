@@ -1,6 +1,6 @@
 import { useLanguage } from '../context/LanguageContext';
 import { translations } from '../context/translations';
-import './Dp.css';
+
 
 export default function DeliveryPage() {
     const { language } = useLanguage();

@@ -32,6 +32,7 @@ html, body {
     max-width: 100vw;
     overflow-x: hidden;
     box-sizing: border-box;
+    background-color: #646cff;
 }
 
 /* Barra superior con icono de filtro */
@@ -67,7 +68,7 @@ html, body {
 }
 
 .modal {
-    background: #ffffff;
+    background: var(--color-negro);
     color: #111;
     padding: 2rem;
     border-radius: 12px;

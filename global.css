@@ -85,3 +85,77 @@ nav, main, footer {
 .bg-suave {
   background-color: var(--color-suave);
 }
+
+
+.delivery-page {
+  position: relative;
+  text-align: center;
+  color: white;
+  font-family: var(--font-principal);
+  overflow: hidden;
+  min-height: 100vh;
+}
+
+.delivery-background {
+  background-image: url('/images/bg1.jpg'); /* Pon tu foto de delivery aquí */
+  background-size: cover;
+  background-position: center;
+  filter: brightness(0.3);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 0;
+}
+
+.delivery-content {
+  position: relative;
+  z-index: 1;
+  padding: 4rem 2rem;
+}
+
+.delivery-content h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #EF491F;
+}
+
+.delivery-content p {
+  font-size: 1.2rem;
+  margin-bottom: 3rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.delivery-options {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.delivery-button {
+  background: transparent;
+  border: 2px solid #A60303;
+  border-radius: 999px;
+  color: #EF491F;
+  font-size: 1.1rem;
+  font-weight: 500;
+  padding: 0.8rem 1.6rem;
+  text-decoration: none;
+  transition: background-color 0.3s, color 0.3s, transform 0.3s;
+}
+
+.delivery-button:hover {
+  background-color: #EF491F;
+  color: var(--color-negro);
+  transform: translateY(-3px);
+  text-decoration: none;
+}
+
+button:focus, a:focus {
+  outline: 2px dashed #A60303;
+  outline-offset: 2px;
+}
