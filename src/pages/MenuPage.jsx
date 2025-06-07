@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import { useLanguage } from '../context/LanguageContext';
 import { translations } from '../context/translations';
-import './MenuPage.css'; // crea este archivo si aún no existe
+import './MenuPage.css';
 
 export default function MenuPage() {
     const { language } = useLanguage();

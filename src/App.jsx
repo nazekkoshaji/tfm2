@@ -2,14 +2,14 @@
 import { Routes, Route, useLocation } from 'react-router-dom';
 import Home from './pages/Home';
 import MenuPage from './pages/MenuPage';
-import Menu from './components/Menu';  // Asegúrate de tener este componente
+import Menu from './components/Menu';
 import About from './pages/About';
 import ReservationPage from './pages/ReservationPage';
 import Header from './components/Header';
 import Footer from './components/Footer';
 
 import './App.css';
-import DeliveryPage from "./pages/DeliveryPage.jsx";
+
 
 function App() {
     const location = useLocation();
@@ -33,7 +33,7 @@ function App() {
                     <Route path="/menu/:categoria" element={<Menu />} />
                     <Route path="/reservas" element={<ReservationPage />} />
                     <Route path="/sobre" element={<About />} />
-                    <Route path="/delivery" element={<DeliveryPage />} />
+
 
                 </Routes>
             </main>
