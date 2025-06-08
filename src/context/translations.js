@@ -13,6 +13,7 @@ export const translations = {
         platos: "Platos",
         bebidas: "Bebidas",
         postres: "Postres",
+        domicilio: "Domicilio",
         about: {
             tabs: {
                 chef: 'Nuestro chef',
@@ -72,6 +73,7 @@ export const translations = {
         platos: "Dishes",
         bebidas: "Drinks",
         postres: "Desserts",
+        domicilio: "Delivery",
         about: {
             tabs: {
                 chef: 'Our Chef',

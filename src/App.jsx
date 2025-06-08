@@ -7,6 +7,7 @@ import About from './pages/About';
 import ReservationPage from './pages/ReservationPage';
 import Header from './components/Header';
 import Footer from './components/Footer';
+import Domicilio from './pages/Domicilio';
 
 import './App.css';
 
@@ -33,6 +34,7 @@ function App() {
                     <Route path="/menu/:categoria" element={<Menu />} />
                     <Route path="/reservas" element={<ReservationPage />} />
                     <Route path="/sobre" element={<About />} />
+                    <Route path="/domicilio" element={<Domicilio />} />
 
 
                 </Routes>

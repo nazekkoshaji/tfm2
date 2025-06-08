@@ -33,6 +33,7 @@ function Header() {
                         </li>
                         <li><Link to="/reservas">{t.reservas}</Link></li>
                         <li><Link to="/sobre">{t.sobreNosotros}</Link></li>
+                        <li><Link to="/domicilio">{t.domicilio}</Link></li>
 
 
                     </ul>
