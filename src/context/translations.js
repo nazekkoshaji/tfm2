@@ -57,6 +57,11 @@ export const translations = {
             button: "Reservar",
             success: "¡Reserva realizada con éxito 🎉!",
             error: "Error al realizar la reserva"
+        },
+        filterModal: {
+            title: "Filtrar por alérgenos",
+            without: "Sin",
+            button: "Filtrar"
         }
     },
     en: {
@@ -117,6 +122,11 @@ export const translations = {
             button: "Book",
             success: "Reservation successfully made 🎉!",
             error: "Error making the reservation"
+        },
+        filterModal: {
+            title: "Filter by allergens",
+            without: "Without",
+            button: "Filter"
         }
     }
 };

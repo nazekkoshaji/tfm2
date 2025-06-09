@@ -12,7 +12,6 @@ export default function Menu() {
     const [isModalOpen, setIsModalOpen] = useState(false);
     const { language } = useLanguage();
 
-
     const t = translations[language];
 
     const capitalize = (str) => str.charAt(0).toUpperCase() + str.slice(1);
@@ -65,7 +64,6 @@ export default function Menu() {
                 <h2>
                     <span>{t.menu}</span> {'>'} <span>{t[categoria]}</span>
                 </h2>
-
             </div>
 
             <div className="filter-bar">
@@ -84,24 +82,35 @@ export default function Menu() {
                         <button
                             className="close-button"
                             onClick={() => setIsModalOpen(false)}
-                            aria-label="Cerrar modal"
+                            aria-label={language === 'es' ? "Cerrar modal" : "Close modal"}
                         >
                             &times;
                         </button>
 
-                        <h2>Filtrar por alérgenos</h2>
+                        <h2>{t.filterModal.title}</h2>
                         <form>
-                            {allAllergens.map((allergen) => (
-                                <label key={allergen} className="checkbox-label">
-                                    <input
-                                        type="checkbox"
-                                        checked={selectedAllergens.includes(allergen)}
-                                        onChange={() => handleCheckboxChange(allergen)}
-                                    />
-                                    Sin {allergen.toLowerCase()}
-                                </label>
-                            ))}
-                            <button type="button" onClick={applyFilter}>Filtrar</button>
+                            {allAllergens.map((allergen) => {
+                                const filename = normalizeAllergen(allergen);
+                                return (
+                                    <label key={allergen} className="checkbox-label">
+                                        <input
+                                            type="checkbox"
+                                            checked={selectedAllergens.includes(allergen)}
+                                            onChange={() => handleCheckboxChange(allergen)}
+                                        />
+                                        <img
+                                            src={`/allergens/${filename}.png`}
+                                            alt={allergen}
+                                            className="allergen-icon"
+                                            style={{ width: '20px', height: '20px', marginRight: '8px' }}
+                                        />
+                                        {t.filterModal.without} {allergen.toLowerCase()}
+                                    </label>
+                                );
+                            })}
+                            <button type="button" onClick={applyFilter}>
+                                {t.filterModal.button}
+                            </button>
                         </form>
                     </div>
                 </div>
