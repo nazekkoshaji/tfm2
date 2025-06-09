@@ -19,7 +19,7 @@ function Header() {
                 <h1>SUSHI BAR</h1>
 
 
-                {/* Navegación con traducción */}
+
                 <nav>
                     <ul className="nav-list">
                         <li><Link to="/">{t.home}</Link></li>
