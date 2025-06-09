@@ -3,15 +3,19 @@ import { useParams } from 'react-router-dom';
 import { getMenuItems } from '../services/api';
 import { useLanguage } from '../context/LanguageContext';
 import './Menu.css';
+import { translations } from '../context/translations';
 
 export default function Menu() {
     const [items, setItems] = useState([]);
     const { categoria } = useParams();
-
     const [selectedAllergens, setSelectedAllergens] = useState([]);
     const [isModalOpen, setIsModalOpen] = useState(false);
     const { language } = useLanguage();
 
+
+    const t = translations[language];
+
+    const capitalize = (str) => str.charAt(0).toUpperCase() + str.slice(1);
 
     useEffect(() => {
         getMenuItems().then(data => {
@@ -25,7 +29,6 @@ export default function Menu() {
         });
     }, [categoria]);
 
-
     const normalizeAllergen = (name) =>
         name.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
 
@@ -34,7 +37,8 @@ export default function Menu() {
         "Pescado",
         "Moluscos",
         "Lácteos",
-        "Soja"
+        "Soja",
+        "Crustaceos"
     ];
 
     const handleCheckboxChange = (allergen) => {
@@ -57,6 +61,12 @@ export default function Menu() {
 
     return (
         <div className="menu-container">
+            <div className="breadcrumb">
+                <h2>
+                    <span>{t.menu}</span> {'>'} <span>{t[categoria]}</span>
+                </h2>
+
+            </div>
 
             <div className="filter-bar">
                 <img
@@ -67,10 +77,18 @@ export default function Menu() {
                 />
             </div>
 
-            {/* Modal con checkboxes */}
+            {/* Modal con botón de cierre */}
             {isModalOpen && (
                 <div className="modal-overlay" onClick={() => setIsModalOpen(false)}>
                     <div className="modal" onClick={(e) => e.stopPropagation()}>
+                        <button
+                            className="close-button"
+                            onClick={() => setIsModalOpen(false)}
+                            aria-label="Cerrar modal"
+                        >
+                            &times;
+                        </button>
+
                         <h2>Filtrar por alérgenos</h2>
                         <form>
                             {allAllergens.map((allergen) => (
@@ -98,12 +116,10 @@ export default function Menu() {
                             alt={item.name[language]}
                             className="menu-image"
                         />
-
                         <div className="menu-info">
                             <h3>{item.name[language]}</h3>
                             <p>{item.description[language]}</p>
                             <p><strong>{item.price.toFixed(2)} €</strong></p>
-
                             {item.allergens && item.allergens.length > 0 && (
                                 <ul className="allergen-list">
                                     {item.allergens.map((allergen, index) => {

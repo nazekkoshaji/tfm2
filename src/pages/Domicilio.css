@@ -1,7 +1,7 @@
 .delivery-page {
     position: relative;
     text-align: center;
-    color: white;
+    color: var(--color-blanco);
     font-family: var(--font-principal);
     overflow: hidden;
     min-height: 100vh;
@@ -29,7 +29,7 @@
 .delivery-content h2 {
     font-size: 2.5rem;
     margin-bottom: 1rem;
-    color: #EF491F;
+    color: var(--color-naranja);
 }
 
 .delivery-content p {
@@ -49,9 +49,9 @@
 
 .delivery-button {
     background: transparent;
-    border: 2px solid #A60303;
+    border: 2px solid var(--color-rojo);
     border-radius: 999px;
-    color: #EF491F;
+    color: var(--color-naranja);
     font-size: 1.1rem;
     font-weight: 500;
     padding: 0.8rem 1.6rem;
@@ -60,13 +60,13 @@
 }
 
 .delivery-button:hover {
-    background-color: #EF491F;
+    background-color: var(--color-naranja);
     color: var(--color-negro);
     transform: translateY(-3px);
     text-decoration: none;
 }
 
 button:focus, a:focus {
-    outline: 2px dashed #A60303;
+    outline: 2px dashed var(--color-rojo);
     outline-offset: 2px;
 }

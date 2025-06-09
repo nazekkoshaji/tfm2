@@ -368,7 +368,7 @@
         "en": "Traditional hot green tea"
       },
       "price": 3.0,
-      "image": "https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg",
+      "image": "https://images.pexels.com/photos/8952816/pexels-photo-8952816.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
       "allergens": []
     },
     {
@@ -383,7 +383,7 @@
         "en": "Japanese soda with marble stopper"
       },
       "price": 4.0,
-      "image": "https://images.pexels.com/photos/15729049/pexels-photo-15729049.jpeg",
+      "image": "https://images.pexels.com/photos/11661146/pexels-photo-11661146.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
       "allergens": []
     },
     {
@@ -398,7 +398,7 @@
         "en": "Japanese dessert with green tea ice cream"
       },
       "price": 5.0,
-      "image": "https://images.pexels.com/photos/11320460/pexels-photo-11320460.jpeg",
+      "image": "https://images.pexels.com/photos/8963442/pexels-photo-8963442.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
       "allergens": [
         "Lácteos"
       ]
@@ -415,7 +415,7 @@
         "en": "Japanese pancake with red bean paste"
       },
       "price": 4.5,
-      "image": "https://images.pexels.com/photos/5863621/pexels-photo-5863621.jpeg",
+      "image": "https://images.pexels.com/photos/31987444/pexels-photo-31987444/free-photo-of-dorayaki-de-matcha-en-plato-postre-japones.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
       "allergens": [
         "Gluten"
       ]

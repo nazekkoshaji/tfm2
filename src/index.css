@@ -84,11 +84,11 @@ button:focus-visible {
 }
 
 button:focus, a:focus, input:focus, textarea:focus, select:focus {
-  outline: 2px dashed var(--color-acento);
+  outline: 2px dashed var(--color-naranja);
   outline-offset: 2px;
 }
 
 button:focus, a:focus, input:focus, textarea:focus, select:focus {
-  outline: 2px dashed var(--color-acento);
+  outline: 2px dashed var(--color-naranja);
   outline-offset: 2px;
 }

@@ -12,7 +12,7 @@ body, html {
 }
 h1, h2, h3, h4, h5, h6, button, input, textarea, select {
     font-family: var(--font-secundaria);
-    color:white;
+    color:var(--color-blanco);
 }
 .about {
     padding: 2rem 2rem;
@@ -20,7 +20,7 @@ h1, h2, h3, h4, h5, h6, button, input, textarea, select {
     margin: 0 auto;
     font-family: 'Helvetica Neue', sans-serif;
     color: var(--color-negro);
-    background-color: black;
+    background-color: var(--color-negro);
 }
 
 /* Botones tipo etiquetas modernas */
@@ -42,20 +42,20 @@ h1, h2, h3, h4, h5, h6, button, input, textarea, select {
     cursor: pointer;
     transition: background-color 0.3s, color 0.3s;
     color: var(--color-negro);
-    border-color: #A60303;
-    color: #EF491F;
+    border-color: var(--color-rojo);
+    color: var(--color-naranja);
 }
 
 .container-buttons button:hover {
-    background-color: #EF491F ;
+    background-color: var(--color-naranja) ;
     color: var(--color-negro);
-    border-color: #A60303;
+    border-color: var(--color-rojo);
 }
 
 .container-buttons button.active {
-    background-color: #EF491F;
+    background-color: var(--color-naranja);
     color: var(--color-negro);
-    border-color: #A60303;
+    border-color: var(--color-rojo);
 }
 
 /* Estilo limpio tipo grid */
@@ -90,7 +90,8 @@ h1, h2, h3, h4, h5, h6, button, input, textarea, select {
 .table-text p {
     font-size: 1.2rem;
     line-height: 1.8;
-    color: white;
+    color: var(--color-blanco);
+    font: var(--font-principal);
 }
 
 /* Responsive */
@@ -110,11 +111,14 @@ h1, h2, h3, h4, h5, h6, button, input, textarea, select {
 }
 
 button:focus, a:focus, input:focus, textarea:focus, select:focus {
-    outline: 2px dashed #A60303;
+    outline: 2px dashed var(--color-rojo);
     outline-offset: 2px;
 }
 
 button:focus, a:focus, input:focus, textarea:focus, select:focus {
-    outline: 2px dashed #A60303;
+    outline: 2px dashed var(--color-rojo);
     outline-offset: 2px;
+}
+.table-text h2{
+    color: var(--color-naranja);
 }

@@ -2,10 +2,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Spectral:wght@400;700&family=Karla:wght@400;700&display=swap');
 
 :root {
-  --color-principal: #A60303;
-  --color-secundario: #400202;
-  --color-acento: #EF491F;
-  --color-suave: #0A2602;
+  --color-rojo: #A01803;
+  --color-naranja: #F34629;
+  --color-granate: #590202;
+  --color-blanco: #FFFFFF;
   --color-negro: #000000;
 
   --font-principal: 'Spectral', serif;
@@ -33,13 +33,13 @@ a {
 a:hover,
 a:focus {
   text-decoration: underline;
-  outline: 2px dashed var(--color-acento);
+  outline: 2px dashed var(--color-naranja);
   outline-offset: 2px;
 }
 
 button, input[type="submit"] {
-  background-color: var(--color-principal);
-  color: #ffffff;
+  background-color: var(--color-rojo);
+  color: var(--color-blanco);
   border: none;
   padding: 0.5em 1em;
   cursor: pointer;
@@ -48,7 +48,7 @@ button, input[type="submit"] {
 
 button:focus,
 input[type="submit"]:focus {
-  outline: 2px dashed var(--color-acento);
+  outline: 2px dashed var(--color-naranja);
   outline-offset: 2px;
 }
 
@@ -60,13 +60,13 @@ input, textarea, select {
 input:focus,
 textarea:focus,
 select:focus {
-  outline: 2px dashed var(--color-acento);
+  outline: 2px dashed var(--color-naranja);
   outline-offset: 2px;
 }
 
 nav, main, footer {
 
-  color: #ffffff;
+  color: var(--color-blanco);
 }
 
 .text-dark {
@@ -74,16 +74,16 @@ nav, main, footer {
 }
 
 .bg-acento {
-  background-color: var(--color-acento);
-  color: #ffffff;
+  background-color: var(--color-naranja);
+  color: var(--color-blanco);
 }
 
 .bg-principal {
-  background-color: var(--color-principal);
+  background-color: var(--color-rojo);
 }
 
 .bg-suave {
-  background-color: var(--color-suave);
+  background-color: var(--color-naranja);
 }
 
 
@@ -118,7 +118,7 @@ nav, main, footer {
 .delivery-content h2 {
   font-size: 2.5rem;
   margin-bottom: 1rem;
-  color: #EF491F;
+  color: var(--color-naranja);
 }
 
 .delivery-content p {
@@ -138,9 +138,9 @@ nav, main, footer {
 
 .delivery-button {
   background: transparent;
-  border: 2px solid #A60303;
+  border: 2px solid var(--color-rojo);
   border-radius: 999px;
-  color: #EF491F;
+  color: var(--color-naranja);
   font-size: 1.1rem;
   font-weight: 500;
   padding: 0.8rem 1.6rem;
@@ -149,13 +149,13 @@ nav, main, footer {
 }
 
 .delivery-button:hover {
-  background-color: #EF491F;
+  background-color: var(--color-naranja);
   color: var(--color-negro);
   transform: translateY(-3px);
   text-decoration: none;
 }
 
 button:focus, a:focus {
-  outline: 2px dashed #A60303;
+  outline: 2px dashed var(--color-rojo);
   outline-offset: 2px;
 }

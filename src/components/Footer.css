@@ -15,8 +15,8 @@ h1, h2, h3, h4, h5, h6, button, input, textarea, select {
   font-family: var(--font-secundaria);
 }
 .footer {
-    background-color: #111;
-    color: white;
+    background-color: var(--color-negro);
+    color: var(--color-blanco);
     padding: 2rem;
     text-align: center;
     font-size: 0.9rem;
@@ -41,11 +41,11 @@ h1, h2, h3, h4, h5, h6, button, input, textarea, select {
 
 .footer h4 {
     margin-bottom: 0.5rem;
-    color: #EF491F;
+    color: var(--color-naranja);
 }
 
 .footer a {
-    color: white;
+    color: var(--color-blanco);
     text-decoration: none;
 }
 
@@ -65,11 +65,11 @@ h1, h2, h3, h4, h5, h6, button, input, textarea, select {
 }
 
 button:focus, a:focus, input:focus, textarea:focus, select:focus {
-  outline: 2px dashed var(--color-acento);
+  outline: 2px dashed var(--color-naranja);
   outline-offset: 2px;
 }
 
 button:focus, a:focus, input:focus, textarea:focus, select:focus {
-  outline: 2px dashed var(--color-acento);
+  outline: 2px dashed var(--color-naranja);
   outline-offset: 2px;
 }

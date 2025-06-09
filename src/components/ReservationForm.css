@@ -21,7 +21,7 @@ h1, h2, h3, h4, h5, h6, button, input, textarea, select {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 2rem;
+    padding: 1rem;
 }
 
 .reservation-page::after {
@@ -53,7 +53,7 @@ h1, h2, h3, h4, h5, h6, button, input, textarea, select {
 
 .reservation-form h2 {
     text-align: center;
-    color: var(--color-acento);
+    color: var(--color-naranja);
     margin-bottom: 1.5rem;
     font-size: 1.7rem;
     font-weight: 600;
@@ -107,14 +107,14 @@ h1, h2, h3, h4, h5, h6, button, input, textarea, select {
     cursor: pointer;
     font-size: 1rem;
     transition: background-color 0.3s ease;
-    border-color: #A60303;
-    color: #EF491F;
+    border-color: var(--color-rojo);
+    color: var(--color-naranja);
 }
 
 .reservation-form button:hover {
-    background-color: #EF491F ;
+    background-color: var(--color-naranja) ;
     color: var(--color-negro);
-    border-color: #A60303;
+    border-color: var(--color-rojo);
 }
 
 .reservation-form .error {
@@ -124,7 +124,7 @@ h1, h2, h3, h4, h5, h6, button, input, textarea, select {
 }
 
 .reservation-form .success {
-    color: var(--color-suave);
+    color: darkgreen;
     font-weight: bold;
     margin-top: 0.5rem;
 }
@@ -136,11 +136,11 @@ h1, h2, h3, h4, h5, h6, button, input, textarea, select {
 }
 
 button:focus, a:focus, input:focus, textarea:focus, select:focus {
-  outline: 2px dashed var(--color-acento);
+  outline: 2px dashed var(--color-rojo);
   outline-offset: 2px;
 }
 
 button:focus, a:focus, input:focus, textarea:focus, select:focus {
-  outline: 2px dashed var(--color-acento);
+  outline: 2px dashed var(--color-rojo);
   outline-offset: 2px;
 }

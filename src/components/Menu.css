@@ -22,20 +22,20 @@ html, body {
     width: 100vw;
     box-sizing: border-box;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: white;
-    color: darkred;
+    background-color: var(--color-blanco);
+    color: var(--color-rojo);
 }
 
-/* Contenedor principal */
+
 .menu-container {
     padding: 2rem;
     max-width: 100vw;
     overflow-x: hidden;
     box-sizing: border-box;
-    background-color: #1D1D22;
+    background-color: var(--color-negro);
 }
 
-/* Barra superior con icono de filtro */
+
 .filter-bar {
     display: flex;
     justify-content: flex-end;
@@ -68,13 +68,18 @@ html, body {
 }
 
 .modal {
-    background: var(--color-negro);
-    color: #111;
+    background: var(--color-blanco);
+    color: var(--color-negro);
     padding: 2rem;
     border-radius: 12px;
     max-width: 400px;
     width: 90%;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    position: relative;
+}
+
+.modal h2{
+    color: var(--color-rojo);
 }
 
 .checkbox-label {
@@ -89,8 +94,8 @@ html, body {
 }
 
 .modal button {
-    background-color: #111;
-    color: #fff;
+    background-color: var(--color-negro);
+    color: var(--color-blanco);
     padding: 0.5rem 1rem;
     border: none;
     border-radius: 8px;
@@ -121,7 +126,7 @@ html, body {
 
 /* Tarjeta de plato */
 .menu-card {
-    background-color: white;
+    background-color: var(--color-blanco);
     border-radius: 12px;
     min-width: 260px;
     max-width: 280px;
@@ -151,13 +156,13 @@ html, body {
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
-    color: black;
+    color: var(--color-negro);
 }
 
 .menu-info h3 {
     font-size: 1.2rem;
     margin: 0;
-    color: #A60303;;
+    color: var(--color-rojo);;
 }
 
 .menu-info p {
@@ -205,7 +210,7 @@ html, body {
 
 .dropdown > a:hover,
 .dropdown > span:hover {
-    color: #b80000; /* Rojo japonés sutil */
+    color: var(--color-rojo);
 }
 
 /* Submenú */
@@ -215,7 +220,7 @@ html, body {
     top: 100%;
     left: 0;
     background-color: var(--color-negro);
-    border: 1px solid #e5e5e5;
+    border: 1px solid var(--color-blanco);
     border-radius: 6px;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
     min-width: 160px;
@@ -238,9 +243,9 @@ html, body {
 }
 
 .dropdown-content li a:hover {
-    background-color: #EF491F ;
+    background-color: var(--color-naranja) ;
     color: var(--color-negro);
-    border-color: #A60303;
+    border-color: var(--color-rojo);
     border: 2px solid;
 }
 
@@ -250,11 +255,27 @@ html, body {
 }
 
 button:focus, a:focus, input:focus, textarea:focus, select:focus {
-  outline: 2px dashed var(--color-acento);
+  outline: 2px dashed var(--color-rojo);
   outline-offset: 2px;
 }
 
 button:focus, a:focus, input:focus, textarea:focus, select:focus {
-  outline: 2px dashed var(--color-acento);
+  outline: 2px dashed var(--color-rojo);
   outline-offset: 2px;
+}
+
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 24px;
+    background: none;
+    border: none;
+    color: red;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.close-button:hover {
+    color: var(--color-rojo);
 }
