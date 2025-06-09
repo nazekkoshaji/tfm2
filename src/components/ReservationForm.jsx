@@ -7,6 +7,8 @@ export default function ReservationForm() {
     const { language } = useLanguage();
     const t = translations[language].reservation;
 
+    const API_URL = 'https://sushispa.vercel.app/reservations';
+
     const [formData, setFormData] = useState({
         name: '',
         email: '',
@@ -19,8 +21,10 @@ export default function ReservationForm() {
     const [error, setError] = useState('');
     const [success, setSuccess] = useState('');
 
+    const allHours = ['20:00', '21:00', '22:00', '23:00', '00:00'];
+
     useEffect(() => {
-        fetch('http://localhost:4000/reservations')
+        fetch(API_URL)
             .then((res) => res.json())
             .then((data) => setReservations(data))
             .catch((err) => console.error('Error fetching reservations:', err));
@@ -39,8 +43,17 @@ export default function ReservationForm() {
         setError('');
         setSuccess('');
 
+        const filtered = reservations.filter(r => r.date === formData.date && r.time === formData.time);
+        const totalPeople = filtered.reduce((sum, r) => sum + Number(r.people), 0);
+        const requested = Number(formData.people);
+
+        if (totalPeople + requested > 10) {
+            setError(t.timeFull);
+            return;
+        }
+
         try {
-            const response = await fetch('http://localhost:4000/reservations', {
+            const response = await fetch(API_URL, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(formData),
@@ -56,7 +69,7 @@ export default function ReservationForm() {
                     time: '',
                     people: 1,
                 });
-                const updated = await fetch('http://localhost:4000/reservations').then((res) => res.json());
+                const updated = await fetch(API_URL).then((res) => res.json());
                 setReservations(updated);
             } else {
                 setError(t.error);
@@ -67,12 +80,17 @@ export default function ReservationForm() {
         }
     };
 
-    const timeOptions = [];
-    for (let hour = 20; hour <= 23; hour++) {
-        const formatted = hour.toString().padStart(2, '0') + ':00';
-        timeOptions.push(formatted);
-    }
-    timeOptions.push('00:00');
+    const timeOptions = allHours.map((hour) => {
+        const filtered = reservations.filter(r => r.date === formData.date && r.time === hour);
+        const total = filtered.reduce((sum, r) => sum + Number(r.people), 0);
+        const remaining = 10 - total;
+        const disabled = total + formData.people > 10;
+        return (
+            <option key={hour} value={hour} disabled={disabled}>
+                {disabled ? `${hour} - ${t.full}` : `${hour} (${remaining} ${t.spotsLeft})`}
+            </option>
+        );
+    });
 
     return (
         <div className="reservation-page">
@@ -136,9 +154,7 @@ export default function ReservationForm() {
                                 required
                             >
                                 <option value="">{t.selectTime}</option>
-                                {timeOptions.map((hour) => (
-                                    <option key={hour} value={hour}>{hour}</option>
-                                ))}
+                                {timeOptions}
                             </select>
                         </div>
 
@@ -149,7 +165,7 @@ export default function ReservationForm() {
                                 id="people"
                                 name="people"
                                 min="1"
-                                max="15"
+                                max="10"
                                 value={formData.people}
                                 onChange={handleChange}
                                 required
