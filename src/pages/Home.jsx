@@ -2,7 +2,7 @@ import './Home.css';
 
 export default function Home() {
     return (
-        <div className="marquee">
+        <div className="marquee" aria-hidden="true">
             <div className="marquee-track">
                 <div className="marquee-text">
                     SUSHI BAR MADRID NIGHT • SUSHI BAR MADRID NIGHT • SUSHI BAR MADRID NIGHT • SUSHI BAR MADRID NIGHT •

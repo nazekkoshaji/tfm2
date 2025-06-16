@@ -25,7 +25,7 @@ export default function About() {
             </div>
             <div className="table">
                 <div className="table-image">
-                    <img src={image} alt={title} />
+                    <img src={image} alt={title} aria-hidden="true"/>
                 </div>
                 <div className="table-text">
                     <h2>{title}</h2>

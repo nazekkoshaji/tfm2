@@ -33,10 +33,11 @@ html, body {
 }
 
 .filter-icon {
-    width: 32px;
-    height: 32px;
+    width: 42px;
+    height: 42px;
     cursor: pointer;
     transition: transform 0.2s ease;
+
 }
 
 .filter-icon:hover {
@@ -280,4 +281,13 @@ textarea:focus,
 select:focus {
     outline: 2px dashed var(--color-rojo);
     outline-offset: 2px;
+}
+.filter-icon-button {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }

@@ -7,7 +7,7 @@ export default function Footer() {
     const t = translations[language];
 
     return (
-        <footer className="footer">
+        <footer className="footer" id="contacto">
             <div className="footer-container">
                 <div className="footer-map">
                     <h4>{t.ubicacion}</h4>

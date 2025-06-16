@@ -60,20 +60,30 @@ export default function Menu() {
 
     return (
         <div className="menu-container">
-            <div className="breadcrumb">
-                <h2>
-                    <span>{t.menu}</span> {'>'} <span>{t[categoria]}</span>
+
+                <h2 aria-label={`${t.menu} ${t[categoria]}`}>
+                    {t.menu} <span aria-hidden="true">{'>'}</span> {t[categoria]}
                 </h2>
-            </div>
+
+
 
             <div className="filter-bar">
-                <img
-                    src="/filtrar.png"
-                    alt="Filtrar"
-                    className="filter-icon"
+                <button
                     onClick={() => setIsModalOpen(true)}
-                />
+                    className="filter-icon-button"
+                    aria-label="Abrir filtros"
+                >
+                    <img
+                        src="/filtrar.png"
+                        alt=""
+                        aria-hidden="true"
+                        className="filter-icon"
+                    />
+                </button>
+
             </div>
+
+
 
             {/* Modal con botón de cierre */}
             {isModalOpen && (
@@ -101,6 +111,7 @@ export default function Menu() {
                                         <img
                                             src={`/allergens/${filename}.png`}
                                             alt={allergen}
+                                            aria-hidden="true"
                                             className="allergen-icon"
                                             style={{ width: '20px', height: '20px', marginRight: '8px' }}
                                         />
@@ -124,6 +135,7 @@ export default function Menu() {
                             src={item.image}
                             alt={item.name[language]}
                             className="menu-image"
+                            aria-hidden="true"
                         />
                         <div className="menu-info">
                             <h3>{item.name[language]}</h3>

@@ -1,19 +1,12 @@
-
-/* Usar fuentes Spectral y Karla */
+/* Fuentes base */
 body, html {
-  font-family: var(--font-principal);
+    font-family: var(--font-principal);
 }
 h1, h2, h3, h4, h5, h6, button, input, textarea, select {
-  font-family: var(--font-secundaria);
+    font-family: var(--font-secundaria);
 }
 
-/* Usar fuentes Spectral y Karla */
-body, html {
-  font-family: var(--font-principal);
-}
-h1, h2, h3, h4, h5, h6, button, input, textarea, select {
-  font-family: var(--font-secundaria);
-}
+/* Contenedor principal del header */
 .header-content {
     display: flex;
     flex-direction: column;
@@ -21,6 +14,7 @@ h1, h2, h3, h4, h5, h6, button, input, textarea, select {
     width: 100vw;
 }
 
+/* Header transparente y con fondo */
 .header-transparent {
     background-color: transparent;
     color: var(--color-blanco);
@@ -39,49 +33,14 @@ h1, h2, h3, h4, h5, h6, button, input, textarea, select {
     z-index: 2;
 }
 
-.nav-list {
-    display: flex;
-    justify-content: center;
-    gap: 2rem;
-    list-style: none;
-    margin-top: 1rem;
-}
-
-.nav-list li a {
-    position: relative;
-    color: var(--color-blanco);
-    text-decoration: none;
-    font-weight: bold;
-    padding: 0.5rem 1rem;
-    z-index: 1;
-}
-
-.nav-list li a::before {
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 120px;
-    height: 120px;
-    background: radial-gradient(circle, rgba(255, 0, 0, 0.4) 0%, rgba(255, 0, 0, 0) 70%);
-    transform: translate(-50%, -50%);
-    border-radius: 50%;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-    z-index: -1;
-}
-
-.nav-list li a:hover::before {
-    opacity: 1;
-}
-
+/* Botón de idioma */
 .lang-button {
-    background-color: var(--color-rojo);
+    background-color: transparent;
     border: 2px solid #f4f4f4;
-    color: var(--color-blanco);
+    color: var(--color-naranja);
     padding: 0.4rem 0.8rem;
-    font-size: 0.95rem;
-    border-radius: 9999px; /* estilo pill */
+    font-size: 1.5rem;
+    border-radius: 9999px;
     cursor: pointer;
     transition: all 0.3s ease;
     font-weight: 500;
@@ -96,49 +55,34 @@ h1, h2, h3, h4, h5, h6, button, input, textarea, select {
 }
 
 .lang-button:hover {
-    background-color: var(--color-blanco);
+    background-color: var(--color-naranja);
     color: #0d0d0d;
     transform: scale(1.05);
 }
 
-.lang-button:focus {
-    outline: none;
-    box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.4);
-}
-
+/* Accesibilidad */
 button:focus, a:focus, input:focus, textarea:focus, select:focus {
-  outline: 2px dashed var(--color-naranja);
-  outline-offset: 2px;
+    outline: 2px dashed var(--color-naranja);
+    outline-offset: 2px;
 }
 
-button:focus, a:focus, input:focus, textarea:focus, select:focus {
-  outline: 2px dashed var(--color-naranja);
-  outline-offset: 2px;
-}
-
-.header-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100vw;
-}
-
-.header-transparent {
-    background-color: transparent;
+/* Menú hamburguesa */
+.hamburger {
+    display: none;
+    font-size: 2rem;
+    background: none;
+    border: none;
+    cursor: pointer;
     color: var(--color-blanco);
-    padding: 1rem 0;
-    text-align: center;
-    position: relative;
-    z-index: 2;
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    z-index: 1001;
 }
 
-.header-colored {
-    background-color: var(--color-negro);
-    color: var(--color-blanco);
-    padding: 1rem 0;
-    text-align: center;
-    position: relative;
-    z-index: 2;
+/* Contenedor del menú */
+.nav-list-container {
+    display: block;
 }
 
 .nav-list {
@@ -147,8 +91,7 @@ button:focus, a:focus, input:focus, textarea:focus, select:focus {
     gap: 2rem;
     list-style: none;
     margin-top: 1rem;
-
-
+    padding: 0;
 }
 
 .nav-list li a {
@@ -158,6 +101,7 @@ button:focus, a:focus, input:focus, textarea:focus, select:focus {
     font-weight: bold;
     padding: 0.5rem 1rem;
     z-index: 1;
+    display: inline-block;
 }
 
 .nav-list li a::before {
@@ -179,23 +123,95 @@ button:focus, a:focus, input:focus, textarea:focus, select:focus {
     opacity: 1;
 }
 
-.lang-button {
-    background-color: transparent;
-    border: 2px solid var(--color-blanco);
-    color: var(--color-blanco);
-    padding: 0.4rem 0.8rem;
-    font-size: 0.95rem;
-    border-radius: 9999px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    font-weight: 500;
-    letter-spacing: 0.5px;
-    display: flex;
-    align-items: center;
-    gap: 0.4rem;
-    position: fixed;
-    top: 1rem;
-    right: 1rem;
-    z-index: 1000;
+/* Dropdown */
+.dropdown {
+    position: relative;
+}
 
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: var(--color-negro);
+    padding: 0.5rem 0;
+    border: 1px solid var(--color-blanco);
+    border-radius: 6px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
+    z-index: 999;
+    min-width: 180px;
+    width: max-content;
+    white-space: nowrap;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content li {
+    list-style: none;
+    display: block;
+    width: 100%;
+}
+
+.dropdown-content li a {
+    display: block;
+    width: 100%;
+    padding: 0.8rem 1.2rem;
+    font-size: 1rem;
+    line-height: 1.4;
+    color: var(--color-blanco);
+    text-decoration: none;
+    transition: background-color 0.2s ease;
+    box-sizing: border-box;
+}
+
+.dropdown-content li a:hover {
+    background-color: var(--color-naranja);
+    color: var(--color-negro);
+}
+
+/* Responsive para móvil */
+@media (max-width: 768px) {
+    .hamburger {
+        display: block;
+    }
+
+    .nav-list-container {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: var(--color-negro);
+        padding: 1rem 2rem;
+        z-index: 1000;
+    }
+
+    .nav-list-container.open {
+        display: block;
+    }
+
+    .nav-list {
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5rem;
+        margin: 0;
+        padding: 0;
+    }
+
+    .dropdown-content {
+        position: static !important;
+        background-color: transparent;
+        box-shadow: none;
+        border: none;
+        padding-left: 1rem;
+        min-width: unset;
+        width: 100%;
+    }
+
+    .dropdown-content li a {
+        padding: 0.75rem 1rem;
+        font-size: 1rem;
+    }
 }
