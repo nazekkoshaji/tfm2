@@ -9,11 +9,14 @@ export default function ReservationForm() {
 
     const API_URL = 'https://6856b8e31789e182b37ee2fa.mockapi.io/reservations';
 
+    // Generar la fecha actual en formato YYYY-MM-DD
+    const today = new Date().toISOString().split('T')[0];
+
     const [formData, setFormData] = useState({
         name: '',
         email: '',
         phone: '',
-        date: '',
+        date: today,
         time: '',
         people: 1,
     });
@@ -66,7 +69,7 @@ export default function ReservationForm() {
                     name: '',
                     email: '',
                     phone: '',
-                    date: '',
+                    date: today,
                     time: '',
                     people: 1,
                 });
@@ -142,7 +145,7 @@ export default function ReservationForm() {
                                 value={formData.date}
                                 onChange={handleChange}
                                 required
-                                min="2025-06-22"
+                                min={today}
                                 className="custom-date-input"
                             />
                             <span className="icon">📅</span>
