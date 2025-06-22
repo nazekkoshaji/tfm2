@@ -7,7 +7,8 @@ export default function ReservationForm() {
     const { language } = useLanguage();
     const t = translations[language].reservation;
 
-    const API_URL = 'https://sushispa.vercel.app/reservations';
+    // ✅ URL de MockAPI actualizada
+    const API_URL = 'https://6856b8e31789e182b37ee2fa.mockapi.io/reservations';
 
     const [formData, setFormData] = useState({
         name: '',

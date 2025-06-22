@@ -4,9 +4,11 @@ import { getMenuItems } from '../services/api';
 import { useLanguage } from '../context/LanguageContext';
 import './Menu.css';
 import { translations } from '../context/translations';
+import Spinner from './Spinner'; // nuevo
 
 export default function Menu() {
     const [items, setItems] = useState([]);
+    const [loading, setLoading] = useState(true); // nuevo estado
     const { categoria } = useParams();
     const [selectedAllergens, setSelectedAllergens] = useState([]);
     const [isModalOpen, setIsModalOpen] = useState(false);
@@ -17,6 +19,7 @@ export default function Menu() {
     const capitalize = (str) => str.charAt(0).toUpperCase() + str.slice(1);
 
     useEffect(() => {
+        setLoading(true); // iniciamos el loading
         getMenuItems().then(data => {
             const filtered = data.filter(item => {
                 if (categoria === "platos") return item.tipo === "plato";
@@ -25,6 +28,7 @@ export default function Menu() {
                 return false;
             });
             setItems(filtered);
+            setLoading(false); // finalizamos el loading
         });
     }, [categoria]);
 
@@ -58,14 +62,13 @@ export default function Menu() {
             !item.allergens?.some(a => selectedAllergens.includes(a))
         );
 
+    if (loading) return <Spinner />;
+
     return (
         <div className="menu-container">
-
-                <h2 aria-label={`${t.menu} ${t[categoria]}`}>
-                    {t.menu} <span aria-hidden="true">{'>'}</span> {t[categoria]}
-                </h2>
-
-
+            <h2 aria-label={`${t.menu} ${t[categoria]}`}>
+                {t.menu} <span aria-hidden="true">{'>'}</span> {t[categoria]}
+            </h2>
 
             <div className="filter-bar">
                 <button
@@ -80,12 +83,8 @@ export default function Menu() {
                         className="filter-icon"
                     />
                 </button>
-
             </div>
 
-
-
-            {/* Modal con botón de cierre */}
             {isModalOpen && (
                 <div className="modal-overlay" onClick={() => setIsModalOpen(false)}>
                     <div className="modal" onClick={(e) => e.stopPropagation()}>
@@ -127,7 +126,6 @@ export default function Menu() {
                 </div>
             )}
 
-            {/* Carrusel de platos */}
             <div className="menu-carousel">
                 {filteredItems.map(item => (
                     <div key={item.id} className="menu-card">
