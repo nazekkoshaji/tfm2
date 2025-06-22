@@ -4,11 +4,11 @@ import { getMenuItems } from '../services/api';
 import { useLanguage } from '../context/LanguageContext';
 import './Menu.css';
 import { translations } from '../context/translations';
-import Spinner from './Spinner'; // nuevo
+import Spinner from './Spinner';
 
 export default function Menu() {
     const [items, setItems] = useState([]);
-    const [loading, setLoading] = useState(true); // nuevo estado
+    const [loading, setLoading] = useState(true);
     const { categoria } = useParams();
     const [selectedAllergens, setSelectedAllergens] = useState([]);
     const [isModalOpen, setIsModalOpen] = useState(false);
@@ -19,17 +19,20 @@ export default function Menu() {
     const capitalize = (str) => str.charAt(0).toUpperCase() + str.slice(1);
 
     useEffect(() => {
-        setLoading(true); // iniciamos el loading
-        getMenuItems().then(data => {
-            const filtered = data.filter(item => {
-                if (categoria === "platos") return item.tipo === "plato";
-                if (categoria === "bebidas") return item.tipo === "bebida";
-                if (categoria === "postres") return item.tipo === "postre";
-                return false;
+        setLoading(true);
+        // Simulación de retardo para ver el spinner (puedes quitar el setTimeout en producción)
+        setTimeout(() => {
+            getMenuItems().then(data => {
+                const filtered = data.filter(item => {
+                    if (categoria === "platos") return item.tipo === "plato";
+                    if (categoria === "bebidas") return item.tipo === "bebida";
+                    if (categoria === "postres") return item.tipo === "postre";
+                    return false;
+                });
+                setItems(filtered);
+                setLoading(false);
             });
-            setItems(filtered);
-            setLoading(false); // finalizamos el loading
-        });
+        }, 800); // retraso de 800ms para que se vea el spinner
     }, [categoria]);
 
     const normalizeAllergen = (name) =>
