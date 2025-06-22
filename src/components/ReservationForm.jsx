@@ -7,7 +7,6 @@ export default function ReservationForm() {
     const { language } = useLanguage();
     const t = translations[language].reservation;
 
-    // ✅ URL de MockAPI actualizada
     const API_URL = 'https://6856b8e31789e182b37ee2fa.mockapi.io/reservations';
 
     const [formData, setFormData] = useState({
@@ -18,6 +17,7 @@ export default function ReservationForm() {
         time: '',
         people: 1,
     });
+
     const [reservations, setReservations] = useState([]);
     const [error, setError] = useState('');
     const [success, setSuccess] = useState('');
@@ -96,7 +96,7 @@ export default function ReservationForm() {
     return (
         <div className="reservation-page">
             <div className="reservation-content">
-                <form onSubmit={handleSubmit} className="reservation-form">
+                <form onSubmit={handleSubmit} className="reservation-form" lang="es">
                     <h2>{t.title}</h2>
 
                     <label htmlFor="name">{t.name}</label>
@@ -133,7 +133,7 @@ export default function ReservationForm() {
                     />
 
                     <div className="form-row">
-                        <div className="form-group">
+                        <div className="form-group custom-date-wrapper">
                             <label htmlFor="date">{t.date}</label>
                             <input
                                 type="date"
@@ -142,7 +142,10 @@ export default function ReservationForm() {
                                 value={formData.date}
                                 onChange={handleChange}
                                 required
+                                min="2025-06-22"
+                                className="custom-date-input"
                             />
+                            <span className="icon">📅</span>
                         </div>
 
                         <div className="form-group">

@@ -144,3 +144,37 @@ button:focus, a:focus, input:focus, textarea:focus, select:focus {
   outline: 2px dashed var(--color-rojo);
   outline-offset: 2px;
 }
+
+/* Personalización del campo de fecha */
+
+.custom-date-wrapper {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.custom-date-input {
+    padding-right: 40px;
+    font-size: 1rem;
+}
+
+/* Oculta el icono nativo */
+.custom-date-input::-webkit-calendar-picker-indicator {
+    opacity: 0;
+    cursor: pointer;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* Añade icono personalizado */
+.custom-date-wrapper .icon {
+    position: absolute;
+    right: 10px;
+    top: 38px; /* Ajusta según tu diseño */
+    transform: translateY(-50%);
+    font-size: 24px;
+    pointer-events: none;
+}
