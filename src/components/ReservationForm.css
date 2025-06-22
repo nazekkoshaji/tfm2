@@ -20,9 +20,11 @@ h1, h2, h3, h4, h5, h6, button, input, textarea, select {
     position: relative;
     display: flex;
     justify-content: center;
-    align-items: center;
-    padding: 1rem;
+    align-items: flex-start; /* antes: center */
+    padding: 2rem 1rem 1rem; /* añade espacio arriba */
+    overflow-y: auto; /* permite scroll solo si es necesario */
 }
+
 
 .reservation-page::after {
     content: '';
