@@ -120,25 +120,31 @@ export default function Menu() {
                 </div>
             )}
 
-            <div className="menu-carousel">
+            <div className="menu-carousel" role="list">
                 {filteredItems.map(item => (
-                    <div key={item.id} className="menu-card">
+                    <div
+                        key={item.id}
+                        className="menu-card"
+                        role="listitem"
+                        tabIndex="0"
+                        aria-label={`${item.name[language]}, ${item.price.toFixed(2)} euros`}
+                    >
                         <img
                             src={item.image}
-                            alt={item.name[language]}
-                            className="menu-image"
+                            alt=""
                             aria-hidden="true"
+                            className="menu-image"
                         />
                         <div className="menu-info">
                             <h3>{item.name[language]}</h3>
                             <p>{item.description[language]}</p>
                             <p><strong>{item.price.toFixed(2)} €</strong></p>
                             {item.allergens && item.allergens.length > 0 && (
-                                <ul className="allergen-list">
+                                <ul className="allergen-list" role="list">
                                     {item.allergens.map((allergen, index) => {
                                         const filename = normalizeAllergen(allergen);
                                         return (
-                                            <li key={index}>
+                                            <li key={index} role="listitem">
                                                 <img
                                                     src={`/allergens/${filename}.png`}
                                                     alt=""
