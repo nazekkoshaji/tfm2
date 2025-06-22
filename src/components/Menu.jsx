@@ -4,11 +4,9 @@ import { getMenuItems } from '../services/api';
 import { useLanguage } from '../context/LanguageContext';
 import './Menu.css';
 import { translations } from '../context/translations';
-import Spinner from './Spinner';
 
 export default function Menu() {
     const [items, setItems] = useState([]);
-    const [loading, setLoading] = useState(true);
     const { categoria } = useParams();
     const [selectedAllergens, setSelectedAllergens] = useState([]);
     const [isModalOpen, setIsModalOpen] = useState(false);
@@ -19,20 +17,15 @@ export default function Menu() {
     const capitalize = (str) => str.charAt(0).toUpperCase() + str.slice(1);
 
     useEffect(() => {
-        setLoading(true);
-        // Simulación de retardo para ver el spinner (puedes quitar el setTimeout en producción)
-        setTimeout(() => {
-            getMenuItems().then(data => {
-                const filtered = data.filter(item => {
-                    if (categoria === "platos") return item.tipo === "plato";
-                    if (categoria === "bebidas") return item.tipo === "bebida";
-                    if (categoria === "postres") return item.tipo === "postre";
-                    return false;
-                });
-                setItems(filtered);
-                setLoading(false);
+        getMenuItems().then(data => {
+            const filtered = data.filter(item => {
+                if (categoria === "platos") return item.tipo === "plato";
+                if (categoria === "bebidas") return item.tipo === "bebida";
+                if (categoria === "postres") return item.tipo === "postre";
+                return false;
             });
-        }, 800); // retraso de 800ms para que se vea el spinner
+            setItems(filtered);
+        });
     }, [categoria]);
 
     const normalizeAllergen = (name) =>
@@ -64,8 +57,6 @@ export default function Menu() {
         : items.filter(item =>
             !item.allergens?.some(a => selectedAllergens.includes(a))
         );
-
-    if (loading) return <Spinner />;
 
     return (
         <div className="menu-container">
@@ -112,7 +103,7 @@ export default function Menu() {
                                         />
                                         <img
                                             src={`/allergens/${filename}.png`}
-                                            alt={allergen}
+                                            alt=""
                                             aria-hidden="true"
                                             className="allergen-icon"
                                             style={{ width: '20px', height: '20px', marginRight: '8px' }}
@@ -150,9 +141,11 @@ export default function Menu() {
                                             <li key={index}>
                                                 <img
                                                     src={`/allergens/${filename}.png`}
-                                                    alt={allergen}
+                                                    alt=""
+                                                    aria-hidden="true"
                                                     className="allergen-icon"
                                                 />
+                                                <span className="sr-only">{allergen}</span>
                                             </li>
                                         );
                                     })}
